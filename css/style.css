@@ -14,7 +14,7 @@ img{padding: 0; margin: 0;}
     .inner{width: 100%; max-width:764px; min-width: 320px; margin: 0 auto;}
 
     .logo{float: left; margin-left: 10px;}
-    .hambuger{float: right; padding-top: 40px; margin-right: 10px;}
+    .hambuger{float: right; padding-top: 30px; margin-right: 10px;}
     li{display: none;}
     .main_img1{
     position: relative;width: 100%; margin-bottom: 0;}
@@ -60,7 +60,7 @@ img{padding: 0; margin: 0;}
     font-size: 15px;
     float: left;
     line-height: 50px;
-    margin-right: 5%;
+    margin-right: 5.4%;
 }
 .menu li a{color: #eaeaea;}
 .menu li:nth-child(9){margin-right: 0;}
