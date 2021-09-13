@@ -6,16 +6,23 @@ body{width: 100%; font-family: 'Roboto', sans-serif; overflow-x: hidden;}
 img{padding: 0; margin: 0;}
 .space{clear: both;}
 .inner{width: 100%; max-width:1280px; min-width: 320px; margin: 0 auto;}
-
+.bx-prev{display: none;}
+.bx-next{display: none;}
 
 /*테블릿 이하일때*/
 @media all and (max-width:764px){
     .body{width: 100%;}
     .inner{width: 100%; max-width:764px; min-width: 320px; margin: 0 auto;}
-
-    .logo{float: left; margin-left: 10px;}
-    .hambuger{float: right; padding-top: 30px; margin-right: 10px;}
-    li{display: none;}
+    #header{position: relative; height: 70px;}
+    .logo{position: absolute; width: 75px; height: 75px; margin: 0 auto; right: 0; left: 0;}
+    .icon_menu{float: right;height: 70px; }
+    .icon_menu ul li{float: left; line-height: 35px; width: 25px; padding-top: 20px; padding-right: 10px;}
+    .icon_menu img{vertical-align: bottom;width: 100%;}
+    .hambuger{float: left; padding-top:25px; padding-left: 10px;}
+    .btn_menu{float: left; background-color: #e12f29; width: 100%;}
+    .btn_menu li{border-top: 1px solid rgb(255,255,255, .3);}
+    .btn_menu li a{color: #eaeaea; line-height: 30px; padding: 10px; font-size: 13px;}
+    .menu li{display: none;}
     .main_img1{
     position: relative;width: 100%; margin-bottom: 0;}
     .main_img1 img{width: 100%;}
@@ -29,7 +36,9 @@ img{padding: 0; margin: 0;}
     h3{text-align: center; margin-bottom: 25px;}
     .box{width: 100%;}
     .box img{width: 100%;}
+    .coffee .box:hover img{opacity: 0.5;cursor: pointer;}
     .machines{margin: 100px 0;}
+    .machines .box{margin-top: -5px; cursor: pointer;}
     .banner_set{position: relative;width: 100%;}
     .banner_img{width: 100%; margin-bottom: -10px;}
     .banner_img img{width: 100%;}
@@ -50,6 +59,8 @@ img{padding: 0; margin: 0;}
     margin: 0 auto;
 }
 .hambuger{display: none;}
+.btn_menu{display: none;}
+.icon_menu{display: none;}
 .bottom_header{
     width: 100%;
     background-color: #e12f29;
@@ -108,6 +119,7 @@ img{padding: 0; margin: 0;}
 .coffee .box img{ width: 100%;}
 .coffee .box:hover img{
     opacity: 0.5;
+    cursor: pointer;
 }
 .icon2{
     margin: 0 2%

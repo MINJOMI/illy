@@ -12,6 +12,7 @@
     <title>illycafe</title> <!-- 홈페이지 제목-->
 
     <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
     <!--노토산스-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,11 +23,19 @@
 </head>
 <body>
     <header id="header">
+            <div class="hambuger">
+                <img src="images/btn_hambuger.png" alt="btn_hambuger">
+            </div>
             <div class="logo">
                 <img src="images/logo_02.png" alt="로고"  width="70px" height="70px">
             </div>
-            <div class="hambuger">
-                <img src="images/btn_hambuger.png" alt="btn_hambuger">
+            <div class="icon_menu">
+               <ul>
+                <li><img src="images/my_red.png" alt="마이페이지"></li>
+                <li><img src="images/bag_red.png" alt="장바구니"></li>
+                <li><img src="images/search_red.png" alt="서치"></li>
+                <div class="space"></div>
+                </ul>
             </div>
             <div class="bottom_header">
                 <ul class="inner menu">
@@ -48,18 +57,35 @@
                 <div class="space"></div>
             </ul>
         </div>
+            <ul class="btn_menu">
+                <li><a href="#">ALL PRODUCT</a></li>
+                <li><a href="#">COFFEE</a></li>
+                <li><a href="#">MACHINES</a></li>
+                <li><a href="#">ACESSORIES</a></li>
+                <li><a href="#">SPECIALLY CURATED SET</a></li>
+                <li><a href="#">ILLY ART COLLECTION</a></li>
+            </ul>
+            <div class="space"></div>
     </header>
     <main id="main">
-        <div class="main_img1">
-        <img src="images/main.png" alt="메인이미지1">
-        <div class="main_text">
-            <p>
-                언제 어디서나<br>
-                변하지 않는 일리의 맛<br>
-                <span>Illy cafe</span>
-            </p>
-        </div>
-        </div>
+        <ul class="mainimg">
+            <li>
+                <img src="images/main.png" alt="메인이미지1">
+                <div class="main_text">
+                    <p>
+                    언제 어디서나<br>
+                    변하지 않는 일리의 맛<br>
+                    <span>Illy cafe</span>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <img src="images/main2.png" alt="메인이미지2">
+            </li>
+            <li>
+                <img src="images/main3.png" alt="메인이미지3">
+            </li>
+        </ul>
     </main>
     <figure id="figure">
         <div class="illyinfo">
@@ -150,5 +176,35 @@
             </div>
         </div>
     </footer>
+
+<script src="js/jquery-3.6.0.min.js"></script>
+<script>
+    $(function( ) {
+		$(".btn_menu").hide();
+		$(".hambuger").on("click", function( ) {
+		$(".btn_menu").slideToggle(500, "swing");
+	       });
+        });
+
+
+</script>
+<script src="js/jquery-3.6.0.min.js"></script>
+<!--제이쿼리 라이브러리를 이용하여 만든 bx슬라이더 JS파일 링크-->
+<script src="js/jquery.bxslider.min.js"></script>
+<!--bx슬라이더css파일 추가-->
+<script>
+$(function() {
+	<!--.slide_gallery라는 클래스를 가진 영역에서 bxSlider(이미지 슬라이드) 함수를 호출하겠다-->
+	$('.mainimg').bxSlider({
+		auto: true,
+		autoControls: false,
+		pager: true,
+		speed: 500,
+		pause: 4000,
+		mode: 'fade'
+	});
+});
+</script>
+
 </body>
 </html>
